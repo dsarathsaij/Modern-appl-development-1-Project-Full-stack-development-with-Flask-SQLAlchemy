@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <title>:Register Page</title>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            background-color: #e74545;
+        }
+        .left {
+            flex: 1.25;
+            background: url('https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/208525399/original/747f4ae30924d599bd653b4bc4cb9c9e411c2366/create-a-beautiful-artistic-wallpaper-or-background.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        .right {
+            flex: 1;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+        }
+        .dropdown-menu {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+        }
+        #dropdown{
+            text-align:center;
+        }
+        #loginpage{
+            text-align:center;
+
+        }
+        body{
+        font-family: "Pixelify Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight:700px;
+        font-style: normal;
+        }
+        .custom{
+            font-family: 'pixel';
+        }
+        *{
+            margin: 0px;
+        }
+        #login{
+            border: 10px solid Black;
+        }
+        #canvas{
+            width:80%;
+            margin:auto;
+            height: 900px;
+        }
+        #form{
+            height: 800px;
+            width:600px;    
+            margin:auto;
+            border:4px solid red;
+            margin-bottom: 85px;
+            margin-top: 85px;
+            padding:10px;
+            border-radius: 10px;
+        }
+        #mainid{
+            background-color: #2641DB;    
+        }
+        #dropdownid{
+            background-color: blueviolet;
+        }
+        .dropdown-menu {
+            background-color: #e74545;
+            border: 1px solid #e74545;
+            border-radius: 0rem;
+            padding: 20rem;
+        }
+        .dropdown-menu.form {
+            padding: 0;
+            margin: 0;
+        }
+        .form-label {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .form-control {
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            width:320px;
+            height:32px;
+        }
+        .form-check-input {
+            margin-right: 2rem;
+        }
+        .form-check-label {
+            font-weight: normal;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            cursor: pointer;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        .dropdown-divider {
+            height: 1px;
+            margin: 1rem 0;
+            overflow: hidden;
+            background-color: #e9ecef;
+        }
+        .dropdown-item {
+            display: block;
+            width: 100%;
+            padding: 0.25rem 1.5rem;
+            clear: both;
+            font-weight: 400;
+            color: #212529;
+            text-align: inherit;
+            white-space: nowrap;
+            background-color: transparent;
+            border: 0;
+        }
+
+        .dropdown-item:hover {
+            background-color: #e6d5d5;
+            color: #0056b3;
+        }
+        .abc::placeholder{
+            text-align: center;
+            font-weight:bolder;
+        }
+    </style>
+</head>
+<body>
+    <div class="left"></div>
+    <div class="right">
+        <div class="dropdown-menu">
+            <form class="px-5 py-4" method='POST'>
+                <div class="form-group row"> <br> <br>
+                        <h1 style="text-align:center;">Sponsor Register</h1>
+                </div><br>
+                <div class="mb-3">
+                    <label for="email" class="form-label"><h2>Username :-- </h2><br> </label> <br>
+                    <input type="text" class="form-control abc" id="email" name="sp_un" placeholder="username">
+                </div><br>
+                <br>
+                <br>
+                <div class="mb-3">
+                    <label for="passwd" class="form-label"><h2>Password :-- </h2><br></label> <br>
+                    <input type="password" class="form-control abc" id="passwd" name="sp_password" placeholder="Password">
+                </div>
+                <br>
+                <label for="simple-dropdown" class="dropdown-item:hover"><h2>Select Your Role<br></h2></label><br>
+                <select id="simple-dropdown" name="sp_role">
+                    <option value="Tennis">Tennis</option>
+                    <option value="Cricket">Cricket</option>
+                    <option value="VolleyBall">VolleyBall</option>
+                    <option value="BaseBall">BaseBall</option>
+                    <option value="FootBall">FootBall</option>
+                    <option value="BasketBall">BasketBall</option>
+                    <option value="Rugby">Rugby</option>
+                    <option value="Golf">Golf</option>
+                </select><br><br>
+                    <br><br><br><button type="submit" class="btn btn-primary" id="buttonabc"><h2>Register<h2></button><br>
+            </form><br>
+            <div class="dropdown-divider"></div> <br>
+            <a class="dropdown-item" href="sponsorlogin.html"><h3>Back to Login ? Click here</h3> </a>
+        </div> <br>
+    </div>
+</body>
+</html>

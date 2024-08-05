@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>:Sponsor Page</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <style>
+        body{
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            background-color: #e74545;
+            font-family: "Pixelify Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight:900px;
+            font-style: normal;
+            padding: 0;
+            color: #000;
+        }
+        .card-header {
+            text-align: center;
+            font-size: 1.25rem;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .nav-item {
+            margin: 0 10px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .section {
+            width: 60%;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 24px;
+            border-bottom: 3px solid #000;
+            padding-bottom: 10px;
+        }
+
+        #mb-3{
+            text-align:center;
+        }
+
+        #otherText:disabled {
+            display: none;
+        }
+
+        #otherText:enabled {
+            display: inline-block;
+        }
+        
+
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Sponsor DashBoard !!</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">DashBoard</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                    <a class="nav-link" href="serachinf.html">Search</a>
+                </li>              
+                <li class="nav-item">
+                    <a class="nav-link" href="influencerlogin.html">Logout</a>
+                </li>
+            </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h1><br><br><br><br><br><br><br>Let's Make a Campaign !! </h1> 
+        <form method="POST" action="{{ url_for('creacamp', sp_id=user.sp_id) }}">
+            <div class="mb-3">
+                <label for="campaignName" class="form-label">Campaign Name</label>
+                <input type="text" class="form-control" id="campaignName" name="campaignName" required>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="startDate" class="form-label">Date of Start</label>
+                <input type="date" class="form-control" id="startDate" name="startDate" required>
+            </div>
+            <div class="mb-3">
+                <label for="endDate" class="form-label">Date of End</label>
+                <input type="date" class="form-control" id="endDate" name="endDate" required>
+            </div>
+            <div class="mb-3">
+                <label for="paymentAmount" class="form-label">Payment Amount Rs.</label>
+                <input type="number" class="form-control" id="paymentAmount" name="paymentAmount" required>
+            </div>
+            <div class="mb-3">
+                <label for="goals" class="form-label">Goals</label>
+                <textarea class="form-control" id="goals" name="goals" rows="3"></textarea>
+            </div>
+            <label>Select Item: </label>
+            <input type="radio" name="item" value="tshirts" id="tshirts">
+            <label for="tshirts">T-shirts</label>
+            
+            <input type="radio" name="item" value="pants" id="pants">
+            <label for="pants">Pants</label>
+            
+            <input type="radio" name="item" value="shirts" id="shirts">
+            <label for="shirts">Shirts</label>
+            
+            <input type="radio" name="item" value="shoes" id="shoes">
+            <label for="shoes" style="text-align:center">Shoes</label>
+            <br>
+            <button type="submit" class="btn btn-primary">Create Campaign</button><br><br><br><br>
+        </form>
+    </div>
+
+        
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
